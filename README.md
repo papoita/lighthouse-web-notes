@@ -25,6 +25,10 @@ shortcut to oppening preview in vs code
 * [Week 3](/Week_3)
   *[Day 11](Week_3/Day_11) Nov 1
   *[Day 12](Week_3/Day_12) Nov 2
+  *[Day 13](Week_3/Day_13) Nov 3
+  *[Day 14](Week_3/Day_14) Nov 5
+  *[Day 15](Week_3/Day_15) Nov 6
+  *[Day 16](Week_3/Day_16) Nov 7
 
 
 
@@ -45,6 +49,7 @@ shortcut to oppening preview in vs code
 
 
 
- git commit --amend --date="Sun Nov 07 14:00 2021 +0100" --no-edit
+ git commit --amend --date="Sun Nov 07 23:00 2021 +0100" --no-edit
 
  testing
+ git commit --amend --date="Sun Nov 07 14:00 2011 +0100" --no-edit
