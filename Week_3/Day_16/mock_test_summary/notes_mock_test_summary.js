@@ -1,3 +1,4 @@
+//This was crerated to summarize the first mock test LGL
 const sum = function (arr) {
   /* IMPLEMENT ME */
   let sumed = 0;
