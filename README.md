@@ -1,17 +1,18 @@
 # Paola's Notes
 ## Summary
-This repository will contain all of the notes taken by Paola for the Lighhouse Labs Web Development Bootcamp - Oct Cohort.
+This repository will contain all of the notes taken by [Paola](https://github.com/papoita) for the Lighhouse Labs Web Development Bootcamp - Oct Cohort.
 
 shortcut to oppening preview in vs code
 (<kbd> cmd </kbd>  + <kbd> K </kbd>).
 
 ### links
 
-... taken by [Paola](https://github.com/papoita)
+
 
 * [Week 1](/Week_1)
   * [Day 1](/Week_1/Day_1)
   * [Day 2](/Week_1/Day_2)
+  * [Day 3](/Week_1/Day_3)
 
 
 
