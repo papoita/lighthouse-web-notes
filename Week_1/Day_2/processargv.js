@@ -5,4 +5,4 @@ for (let j = 0; j < process.argv.length; j++) {
 }
 
 //$ node processargv.js tom jack 43
-// line to run the code and get the indexes
+// line to run the code and get the indexesß
