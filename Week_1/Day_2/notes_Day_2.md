@@ -13,5 +13,8 @@ https://lodash.com/
 https://github.com/lodash/lodash
 Lotide is a clone of lodash simplified
 
-## console.assert
+## console.assert 
  writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.
+
+## assertEqual (LHl version of cnosole alert)
+more verbose and colorfull
