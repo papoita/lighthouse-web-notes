@@ -1,0 +1,1 @@
+Hint: The array slice method can be used on an array to remove some of initial elements that we do not need.
