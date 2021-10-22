@@ -18,7 +18,7 @@ Lotide is a clone of lodash simplified
 
  # Lotide library
 
-## funciton assertEqual (LHl version of cnosole alert)
+## function assertEqual (LHl version of cnosole alert)
 more verbose and colorfull
 
 ## Template Literals
