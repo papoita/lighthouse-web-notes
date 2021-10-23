@@ -103,3 +103,6 @@ focus on the approach
   program
   then path file
 
+  functional composition demo used to create a function making it modular in order to solve each instruction by soving it in sequential steps.
+
+
