@@ -6,3 +6,5 @@ const foo = undefined;
 foo.bar
 
 ## minimum values
+always use the return at the end of the function
+console.log will appear as a [] output when running node in terminal
