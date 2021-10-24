@@ -16,7 +16,7 @@ shortcut to oppening preview in vs code
   * [Day 4](/Week_1/Day_4)
 
 
-  * [Lectures](/Lectures)
+  * [Lectures]
     * [Oct_23](/Week_1/Day_4)
 
 
