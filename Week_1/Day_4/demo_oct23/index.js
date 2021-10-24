@@ -1,14 +1,20 @@
 //to test first
 //console.log(process.argv);
 
-//console.log(input);
+
 
 //writting in the terminal node index.js 2 3
 
 //input.slice(2);
+console.log(process.argv);
+
 
 const input = process.argv.slice(2);
+console.log(input);
 
+
+
+/*
 function convertToNumber() {
   const number = [];
   for (let i = 0; i < input.length; i++) {
@@ -43,3 +49,4 @@ process.exit();
 //sumTotal
 
 console.log(`The sum is ${sumTotal}`);
+*/
