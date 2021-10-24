@@ -105,4 +105,7 @@ focus on the approach
 
   functional composition demo used to create a function making it modular in order to solve each instruction by soving it in sequential steps.
 
-
+## using command line input
+console.log(process.argv);
+const input = process.argv.slice(2);
+console.log(input);
