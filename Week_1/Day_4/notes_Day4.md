@@ -13,3 +13,6 @@ stack trace shows the state fo the program qhen the error occurred
 unexpected token
 refernce errors (typos)
 type errors
+
+# gists dice-roller
+https://gist.github.com/papoita/925b36a2bf4b75f401d099cf9fa272f9
