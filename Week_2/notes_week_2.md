@@ -1,3 +1,16 @@
+# Oct 26_2021 work
+
+# countOnly
+
+# countLetters
+ function could return an object where each unique character encountered in the string is a property of the object and the value for that property/key should be the number of occurrences for that character
+ skip spaces
+ use for ... of
+
+ # letterPositions
+
+
+
 # Oct 25_2021
 
 # middle function
@@ -14,6 +27,7 @@ think about complexity only in certain cases, mantain a balance between depth an
 -number
 -symbol
 
+they are put directly in memory
 # object not primitive
 eg date
 functions are objects in js
