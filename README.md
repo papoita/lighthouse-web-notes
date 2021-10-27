@@ -16,9 +16,15 @@ shortcut to oppening preview in vs code
   * [Day 4](/Week_1/Day_4)
   * [Day 5](/Week_1/Day_5)
 
+* [Week 2](/Week_2)
+  *[Day 6](/Week_2/Day_6)
+
+
 
   * [Lectures]
     * [Oct_23](/Week_1/Day_4)
+    * [Oct_26](/Week_2/Day_6)
+      * [Charlotte Notes](https://github.com/papoita/WebFlex-Lectures-October18)
 
 
 
