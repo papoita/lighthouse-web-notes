@@ -1,4 +1,4 @@
-# Oct 31
+# Oct 30 - 31
 ## Anonymous functions
 
 are called inline and do not have a name
