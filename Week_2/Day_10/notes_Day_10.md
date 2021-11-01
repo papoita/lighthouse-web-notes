@@ -22,3 +22,27 @@ functions which operate other functions
 forEach, filter...
 
 functional programming
+
+# Using Map
+map()
+creates a new array populated with the results of calling a provided function on everyelement in the calling array
+
+# Implement Map
+
+# MapTest
+
+# FindKey
+
+
+
+# object property
+https://dmitripavlutin.com/access-object-properties-javascript/
+
+# First Date with Vim
+
+code editor since 1991
+to edit a file in a remote ssh terminal
+default editor for git
+
+edit and command mode
+
