@@ -22,6 +22,8 @@ shortcut to oppening preview in vs code
   *[Day 9](/Week_2/Day_9) Oct 30
   *[Day_10](/Week_2/Day_10)Oct 31
 
+* [Week 3](/Week_3)
+  *[Day 11](Week_3/Day_11) Nov 1
 
 
 
@@ -33,12 +35,15 @@ shortcut to oppening preview in vs code
       * [Charlotte Notes](https://github.com/papoita/WebFlex-Lectures-October18)
 
     * [Oct_30](/Week_2/Day_9) Oct 30
+       * [Oct_31](/Week_2/Day_10) Oct 31
+      * [Sandeep notes](https://github.com/letsandeepio/LHL_flex_oct-18-21/tree/main/w2_callbacks)
+
    
   
       
 
 
 
- git commit --amend --date="Fri Oct 29 14:00 2021 +0100" --no-edit
+ git commit --amend --date="Sat Oct 30 23:30 2021 +0100" --no-edit
 
  testing
