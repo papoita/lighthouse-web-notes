@@ -62,3 +62,35 @@ it defaults to {}
 we can use require with relative paths (like ./myModule)
 it doesn't need the .js extension, as that is implied
 With this knowledge, we can now start to DRY up our Lotide project!
+
+# packages
+node.js package manager npm
+
+packages are self contained code libraries 
+
+# package.json
+all have basivc attributes
+name, description, author
+
+## custom scripts 
+portion allows us to run commands using alias
+
+```npm run myscript```
+
+## dependecies
+section lists the apckages that need to be installed for the project to run
+
+[documentation](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
+
+## installing chalk
+we in w1
+npm init
+shiftC to quit
+
+we installed chalk and created a node/modules/ subdirectory
+
+[chalk docuemntation](https://github.com/chalk/chalk);
+import chalk from 'chalk';
+
+directory of npm install dependencies
+./node-modules
