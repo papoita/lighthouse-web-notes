@@ -45,6 +45,6 @@ shortcut to oppening preview in vs code
 
 
 
- git commit --amend --date="Sat Oct 30 23:30 2021 +0100" --no-edit
+ git commit --amend --date="Sun Nov 07 14:00 2021 +0100" --no-edit
 
  testing
