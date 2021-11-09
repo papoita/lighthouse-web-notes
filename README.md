@@ -18,6 +18,7 @@ shortcut to oppening preview in vs code
 
 
 * [Week 2](/Week_2)
+
   *[Day 6](/Week_2/Day_6) Oct 27
   *[Day 7](/Week_2/Day_7) Oct 28
   *[Day 9](/Week_2/Day_9) Oct 30
@@ -25,6 +26,7 @@ shortcut to oppening preview in vs code
 
 
 * [Week 3](/Week_3)
+
   *[Day 11](Week_3/Day_11) Nov 1
   *[Day 12](Week_3/Day_12) Nov 2
   *[Day 13](Week_3/Day_13) Nov 3
