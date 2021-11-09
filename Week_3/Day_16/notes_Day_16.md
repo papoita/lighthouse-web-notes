@@ -22,5 +22,19 @@ Classes are blueprints or templates used to create instances of objects
 
 OOP goals : code organization, re-use, modularity
 
+### creation of objects
 
+The class syntax.
+The purpose of the new keyword and the concept of constructor functions.
+The difference between classes and instances.
+How we are able to create new object instances with and without class.
+
+programming in an object oriented way. We are using objects to group state and logic in order to keep the code more organized. Now everything associated to a task has been encapsulated inside the task object.
+
+## OOP part 2 - inheritance
+class
+
+
+inheritance to remove code duplication
+build new class with an existing class
 
