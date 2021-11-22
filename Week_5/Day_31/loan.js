@@ -1,19 +1,20 @@
 /** @format */
-let creditLimit = 0;
-let creditLimit = 5000;
-let creditLimit = 300;
+//let creditLimit = 0;
+//let creditLimit = 5000;
+let creditLimit = 150;
 /*
  * Input: number of dollars to loan out
  * Returns: Promise of loan which may or may not fulfill, based on remaining credit.
  * If creditLimit is less than the requested amount, only the remaining limit is loaned out, otherwise the full amount is loaned out. If $0 remain in the limit, the loan request is rejected (error!).
  */
 const loanOut = function (amount) {
+	creditLimit = creditLimit - amount;
 	return new Promise((resolve, reject) => {
+		if (creditLimit >= amount || creditLimit >= 0) {
+			resolve(amount);
+		}
 		if (creditLimit <= 0) {
 			reject("Insufficient Funds!");
-		} else {
-			creditLimit -= amount;
-			resolve(amount);
 		}
 	});
 };
