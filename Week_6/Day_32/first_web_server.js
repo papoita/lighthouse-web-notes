@@ -1,4 +1,8 @@
 /** @format */
+/**
+ * @TODO how to get urls first if else
+ * try in CLI curl -i www.google.com
+ */
 
 const http = require("http");
 const PORT = 8080;
@@ -8,7 +12,7 @@ const requestHandler = function (request, response) {
 	if (request.url === "/") {
 		response.end("Welcome!");
 	} else if (request.url === "/urls") {
-		response.end("www.lighthouselabs.ca\nwww.google.com");
+		response.end("www.lighthouselabs.com");
 	} else {
 		response.statusCode = 404;
 		response.end("404 Page not found");

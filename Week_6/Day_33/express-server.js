@@ -23,13 +23,8 @@ app.get("/", (req, res) => {
 });
 app.get("*", (req, res) => { //wild card if the page doesn't exist
   if(!password)
-  return res.status(401).send("not authorized")
+  return res.status(401).send("not authorized");
 
-if(!something)
-  return res.status(304).send("page not found")
-
-  
-  return res.status(404).send("page not found")
 ;})
 app.listen(port, ()=>{
   console.log(`App listening on port ${port}`)
