@@ -49,3 +49,20 @@ function logKey(e) {
 
  # to remove eventListener 
   // button.removeEventListener('click', user.greeting);
+  
+  Dec 14
+  # What is a stack
+
+  Web Server: node.js
+  middleware: Express
+  Template engine EJS
+  Database: none, just in memory object
+
+  Hosting/infrastructure: Heroku
+
+  MEAN stack: node.js, Express, angular.js and Mongo DB
+
+  Fullstack: both back end and front-end
+
+  server side web servers (node.js, databases)
+  fron-end: GUI HTML CSS js client side or in the browser
