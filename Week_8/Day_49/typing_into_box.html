@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>typeintobox</title>
+</head>
+
+<body>
+  <h1>
+    testing keyboard events
+  </h1>
+  <form action="">
+    <textarea id="textarea">this is a text area form</textarea>
+    <input type="submit" value="submit">
+  </form>
+  <script>
+    // create a function
+    // const printMessage = function () {
+    //   console.log("You clicked on div 2.");
+    // };
+    // const printMessage1 = function () {
+    //   console.log("Your input.");
+    // };
+    // const printMessage2 = function () {
+    //   console.log("You keyup.");
+    // };
+    // const printMessage3 = function () {
+    //   console.log("You keypress.");
+    // };
+    function logKey(e) {
+      console.log(` ${e.code}`);
+    };
+
+    // put a reference to the "div-two" element in a variable
+    const textarea = document.querySelector("#textarea");
+
+    // when div2 is clicked, run the function
+    // textarea.addEventListener('click', printMessage);
+    // textarea.addEventListener('input', printMessage1);
+    // textarea.addEventListener('keyup', printMessage2);
+    // textarea.addEventListener('keypress', printMessage3);
+    textarea.addEventListener('keydown', logKey);
+// REMOVWE EVENT LISTENER
+  // button.removeEventListener('click', user.greeting);
+
+  </script>
+</body>
+
+</html>
