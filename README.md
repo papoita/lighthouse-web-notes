@@ -39,6 +39,20 @@ shortcut to oppening preview in vs code
   * [Day 18](/Week_4/Day_18) Nov 9
   * [Day 19](/Week_4/Day_19) Nov 10
 
+* [Week 5](/Week_5)
+  * [Day 24](/Week_5/Day_24) Nov 15
+  * [Day 25](/Week_5/Day_25) Nov 16
+  * [Day 26](/Week_5/Day_26/pair_programming_word-search.js) Nov 16
+  * [Day 27](/Week_5/Day_27) Nov 17
+  * [Day 28](/Week_5/Day_28) Nov 18
+  * [Day 29](/Week_5/Day_29) Nov 19
+  * [Day 30](/Week_5/Day_30) Nov 20
+  * [Day 31](/Week_5/Day_31) Nov 21
+
+* [Week 6](/Week_6)
+  * [Day 17](/Week_4/Day_17) Nov 8
+  * [Day 18](/Week_4/Day_18) Nov 9
+  * [Day 19](/Week_4/Day_19) Nov 10
 
 * [Lectures]
     * [Oct_23](/Week_1/Day_4)
