@@ -50,13 +50,27 @@ shortcut to oppening preview in vs code
   * [Day 31](/Week_5/Day_31) Nov 21
 
 * [Week 6](/Week_6)
-  * [Day 24](/Week_6/Day_32) Nov 22
-  * [Day 25](/Week_6/Day_33) Nov 23
-  * [Day 25](/Week_6/Day_34) Nov 24
-  * [Day 27](/Week_6/Day_35) Nov 25
-  * [Day 28](/Week_6/Day_36) Nov 26
-  * [Day 29](/Week_6/Day_37) Nov 27
-  * [Day 30](/Week_6/Day_38) Nov 30
+  * [Day 32](/Week_6/Day_32) Nov 22
+  * [Day 33](/Week_6/Day_33) Nov 23
+  * [Day 34](/Week_6/Day_34) Nov 24
+  * [Day 35](/Week_6/Day_35) Nov 25
+  * [Day 36](/Week_6/Day_36) Nov 26
+  * [Day 37](/Week_6/Day_37) Nov 27
+  * [Day 38](/Week_6/Day_38) Nov 30
+
+* [Week 7](/Week_7)
+  * [Day 39](/Week_7/Day_39) Nov 30
+  * [Day 40](/Week_7/Day_40) Dec 03
+  * [Day 41](/Week_7/Day_41) Dec 04
+
+* [Week 8](/Week_8)
+  * [Day 32](/Week_8/Day_32) Nov 22
+  * [Day 33](/Week_8/Day_33) Nov 23
+  * [Day 34](/Week_8/Day_34) Nov 24
+  * [Day 35](/Week_8/Day_35) Nov 25
+  * [Day 36](/Week_8/Day_36) Nov 26
+  * [Day 37](/Week_8/Day_37) Nov 27
+  * [Day 38](/Week_8/Day_38) Nov 30
 
 * [Lectures]
     * [Oct_23](/Week_1/Day_4)
