@@ -64,13 +64,13 @@ shortcut to oppening preview in vs code
   * [Day 41](/Week_7/Day_41) Dec 04
 
 * [Week 8](/Week_8)
-  * [Day 32](/Week_8/Day_32) Nov 22
-  * [Day 33](/Week_8/Day_33) Nov 23
-  * [Day 34](/Week_8/Day_34) Nov 24
-  * [Day 35](/Week_8/Day_35) Nov 25
-  * [Day 36](/Week_8/Day_36) Nov 26
-  * [Day 37](/Week_8/Day_37) Nov 27
-  * [Day 38](/Week_8/Day_38) Nov 30
+  * [Day 42](/Week_8/Day_42) Dec 06
+  * [Day 43](/Week_8/Day_43) Dec 07
+  * [Day 44](/Week_8/Day_44) Dec 08
+  * [Day 45](/Week_8/Day_45) Dec 09
+  * [Day 46](/Week_8/Day_46) Dec 10
+  * [Day 47](/Week_8/Day_47) Dec 11
+  * [Day 48](/Week_8/Day_49) Dec 12
 
 * [Lectures]
     * [Oct_23](/Week_1/Day_4)
