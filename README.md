@@ -18,21 +18,19 @@ shortcut to oppening preview in vs code
 
 
 * [Week 2](/Week_2)
-
-  *[Day 6](/Week_2/Day_6) Oct 27
-  *[Day 7](/Week_2/Day_7) Oct 28
-  *[Day 9](/Week_2/Day_9) Oct 30
-  *[Day_10](/Week_2/Day_10) Oct 31
+  * [Day 6](/Week_2/Day_6) Oct 27
+  * [Day 7](/Week_2/Day_7) Oct 28
+  * [Day 9](/Week_2/Day_9) Oct 30
+  * [Day_10](/Week_2/Day_10) Oct 31
 
 
 * [Week 3](/Week_3)
-
-  *[Day 11](Week_3/Day_11) Nov 1
-  *[Day 12](Week_3/Day_12) Nov 2
-  *[Day 13](Week_3/Day_13) Nov 3
-  *[Day 14](Week_3/Day_14) Nov 5
-  *[Day 15](Week_3/Day_15) Nov 6
-  *[Day 16](Week_3/Day_16) Nov 7
+  * [Day 11](Week_3/Day_11) Nov 1
+  * [Day 12](Week_3/Day_12) Nov 2
+  * [Day 13](Week_3/Day_13) Nov 3
+  * [Day 14](Week_3/Day_14) Nov 5
+  * [Day 15](Week_3/Day_15) Nov 6
+  * [Day 16](Week_3/Day_16) Nov 7
 
 * [Week 4](/Week_4)
   * [Day 17](/Week_4/Day_17) Nov 8
