@@ -70,7 +70,11 @@ shortcut to oppening preview in vs code
   * [Day 45](/Week_8/Day_45) Dec 09
   * [Day 46](/Week_8/Day_46) Dec 10
   * [Day 47](/Week_8/Day_47) Dec 11
-  * [Day 48](/Week_8/Day_49) Dec 12
+  * [Day 49](/Week_8/Day_49) Dec 12
+
+* [Week 9](/Week_9)
+  * [Day 50](/Week_8/Day_50) Dec 14
+  * [Day 51](/Week_8/Day_51) Dec 20
 
 * [Lectures]
     * [Oct_23](/Week_1/Day_4)
