@@ -10,7 +10,7 @@ shortcut to oppening preview in vs code
 
 
 * [Week 1](/Week_1)
-  * [Day 1](/Week_1/Day_1) Oct 20
+  * [Day 1](lighthouse-web-notes/Week_1/Day_1/lintingGist.js) Oct 20
   * [Day 2](/Week_1/Day_2) Oct 21
   * [Day 3](/Week_1/Day_3) Oct 22
   * [Day 4](/Week_1/Day_4) Oct 23
