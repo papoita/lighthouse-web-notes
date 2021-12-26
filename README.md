@@ -88,9 +88,9 @@ shortcut to oppening preview in vs code
 
 
    *[Tests]
-    *[Nov 6](Week_3/Day_16/mock_test_summary)
-    *[Nov 13](Week_3/Day_16/mock_test_summary)
-    *[Dec 18](Week_3/Day_16/mock_test_summary)
+    * [Nov 6](Week_3/Day_16/mock_test_summary)
+    * [Nov 13](Week_3/Day_16/mock_test_summary)
+    * [Dec 18](Week_3/Day_16/mock_test_summary)
   
   *[js prep]
 
