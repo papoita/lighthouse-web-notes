@@ -10,7 +10,7 @@ shortcut to oppening preview in vs code
 
 
 * [Week 1](/Week_1)
-  * [Day 1](lighthouse-web-notes/Week_1/Day_1/lintingGist.js) Oct 20
+  * [Day 1](/Week_1/Day_1) Oct 20
   * [Day 2](/Week_1/Day_2) Oct 21
   * [Day 3](/Week_1/Day_3) Oct 22
   * [Day 4](/Week_1/Day_4) Oct 23
@@ -87,10 +87,12 @@ shortcut to oppening preview in vs code
     * [Nov 9](Week_4/Day_18/lecture_notes)
 
 
-   * [Tests]
-    * [Nov 6](Week_3/Day_16/mock_test_summary)
+   *[Tests]
+    *[Nov 6](Week_3/Day_16/mock_test_summary)
+    *[Nov 13](Week_3/Day_16/mock_test_summary)
+    *[Dec 18](Week_3/Day_16/mock_test_summary)
   
-      
+  *[js prep]
 
 
 
