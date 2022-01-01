@@ -1,8 +1,12 @@
 <!-- @format -->
 
-Dec 29, 30 2021
+Dec 29, 30, 31 2021
+January 1sT 2022!!
+HAPPY NEW YEAR!
 
 # Flexbox
+cannot use floats and columns but more flexibility
+
 
 Parent element (flex container)
 Child Element (flex items)
@@ -13,11 +17,15 @@ alter width, height, size and dynamic
 direction agnostic
 based on flex-flow directions
 
+
 # Properties
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/#order
 ## display 
-inline or block
+flex
+inline-flex
 ## order 
+integer
+property controls the order in which flex items appear within their flex container, by assigning them to ordinal groups. It takes a single <integer> value, which specifies which ordinal group the flex item belongs to.
 ## flex-direction 
 row, row reverse or column, column-reverse
 ## flex-grow
@@ -33,6 +41,7 @@ defines default size of an element
 If set to 0, the extra space around content isn’t factored in. If set to auto, the extra space is distributed based on its flex-grow
 ## flex flow
 column wrap
+row nowrap
 ## justify-content
 flex-start
 flex-end
@@ -48,8 +57,19 @@ center
 baseline
 stretch
 ## align-items
+align-items: flex-start;
+ align-items: flex-end;
+ align-items: center;
+ align-items: baseline;
+ align-items: stretch;
 
 ## align-content
+ align-content: flex-start;
+ align-content: flex-end;
+ align-content: center;
+ align-content: space-between;
+ align-content: space-around;
+ align-content: stretch;
 
 ## gap, row-gap, column-gap
 gap controls spaces between flex items not outer edges
