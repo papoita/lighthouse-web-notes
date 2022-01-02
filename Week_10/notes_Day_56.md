@@ -17,6 +17,33 @@ alter width, height, size and dynamic
 direction agnostic
 based on flex-flow directions
 
+display: flex;
+flex-direction: horixontal;
+flex-wrap: 
+
+# solutions to difficult things in css
+grids
+sticky footer
+vertical centering
+media object
+grid systems
+input add-ons
+
+https://philipwalton.github.io/solved-by-flexbox/
+
+# leveling up with flexbox
+http://zomigi.com/downloads/Leveling-Up-With-Flexbox_SmashingConf_140319.pdf
+
+
+# Multi-columns holy-grail
+http://tympanus.net/codrops/css_reference/flexbox/
+```
+.container {
+    display: flex;
+    align-items: stretch;
+}
+```
+
 
 # Properties
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/#order
