@@ -12,3 +12,5 @@ fixed desktop min-width: 1024px;
 create the mobile layout styles and used media queries to build tablet and desktop layouts on top of a shared set of base styles
 ## disable zoom in mobile devices
 disabled the default viewport zoom behavior of mobile browsers.
+
+tutorial from https://www.internetingishard.com/
