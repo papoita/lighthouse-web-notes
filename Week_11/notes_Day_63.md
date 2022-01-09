@@ -79,3 +79,30 @@ Delete
 # Entity relationship Diagram (ER diagram)
 
 diagram uses tables field and relationships to plan a database
+
+# relationsal databases for dummies
+
+https://code.tutsplus.com/tutorials/relational-databases-for-dummies--net-30244
+
+duplicates make CRUD operations more challenging
+
+normalization: removed repetition accross column and rows by creating dif tables, and chose meaningful primary keys to link the tables together
+
+## RDBMS (relational database managment systems)
+
+SQlite
+PostgresQL
+All SQL database systems support the same fundamental SQL syntax, which is the more important thing to learn. E
+
+# Visualizing databases
+
+## Entity relationship diagrams
+
+shows each table as a box and line forms
+
+Entity : represents person, place of thing you want to track
+instance: row each individual of entity
+Attribute: columns tells more about each instance of individual can be unique
+Primary Key: attribute or group of attribute must be unique
+Relationship: describes how entities interact with each other : cna be a verb -association (has, )
+Cardinality: count of instances that are allowed or necessary between entity relationships (how many rows from a table to be able to look in another table) minimum and maximum
