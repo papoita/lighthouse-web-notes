@@ -1,6 +1,6 @@
 <!-- @format -->
 
-January 8, 2022
+January 8, 9 2022
 
 # SQL and relational databases
 
@@ -34,6 +34,7 @@ I isoalted
 D durable
 
 Durability requires that data changed by the transaction is written to the database.
+Even though you now know atoms can be broken down into smaller parts, the term atomic means that something can't be broken down into smaller pieces. Here, atomicity means that the transaction behaves as one single action.
 
 # SQL
 
@@ -74,3 +75,7 @@ Create
 Read
 Update
 Delete
+
+# Entity relationship Diagram (ER diagram)
+
+diagram uses tables field and relationships to plan a database
