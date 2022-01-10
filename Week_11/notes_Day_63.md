@@ -106,3 +106,4 @@ Attribute: columns tells more about each instance of individual can be unique
 Primary Key: attribute or group of attribute must be unique
 Relationship: describes how entities interact with each other : cna be a verb -association (has, )
 Cardinality: count of instances that are allowed or necessary between entity relationships (how many rows from a table to be able to look in another table) minimum and maximum
+-- crow's foot notation:
