@@ -1,9 +1,19 @@
 <!-- @format -->
 
-January 10, 2022
+January 10 and 11, 2022
 
 # SQL introduction
 
+https://sqlbolt.com/
+
+Order of execution in SQL
+
+aggregation function
+https://sql-joins.leopard.in.ua/
+
+dif between inner join(data overlapping),
+left join (all data from left) project lives in table A and space shared
+right join (all data table B ) and that data that overlaps
 1970's
 SEQUEL
 Data retrieval
