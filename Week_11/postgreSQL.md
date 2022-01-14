@@ -70,3 +70,32 @@ https://flex-web.compass.lighthouselabs.ca/workbooks/flex-m05w11/activities/719?
 
 to exit
 \q
+
+# Join tables - INNER JOIN
+
+inner join only gives rows were there is a match between the two tables
+students with cohort_id NULL will not appear in a inner Join
+
+SELECT students.name as student_name, email, cohorts.name as cohort_name
+FROM students JOIN cohorts ON cohort_id = cohorts.id;
+
+OR (order doesn't matter)
+
+SELECT students.name as student_name, email, cohorts.name as cohort_name
+FROM cohorts JOIN students ON cohort_id = cohorts.id;
+
+OR with INNER JOIN
+
+SELECT students.name as student_name, email, cohorts.name as cohort_name
+FROM students INNER JOIN cohorts ON cohorts.id = cohort_id;
+
+# OUTER JOIN (LEFT, RIGHT, FULL)
+
+1. FROM students LEFT OUTER JOIN cohorts ON cohorts.id = cohort_id;
+   The first query will return all students because students is to the LEFT of the word JOIN.
+
+2. FROM students RIGHT OUTER JOIN cohorts ON cohorts.id = cohort_id;
+   second query will return all of the cohorts because cohorts is to the RIGHT of the word JOIN.
+
+3. FROM students FULL OUTER JOIN cohorts ON cohorts.id = cohort_id;
+   third query will return all rows from both tables, even when there is no match.
