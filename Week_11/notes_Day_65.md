@@ -38,3 +38,11 @@ FROM students JOIN cohorts;
 
 SELECT students.name as student_name, email, cohorts.name as cohort_name
 FROM students JOIN cohorts ON cohort_id = cohorts.id;
+
+# Visual explanation of SQL join
+
+https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
+
+# Bootcamp queries 2 =JOIN
+
+new file for each individual query
