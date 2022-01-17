@@ -46,3 +46,5 @@ https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
 # Bootcamp queries 2 =JOIN
 
 new file for each individual query
+
+SELECT name, email,cohort_id FROM students JOIN cohorts;
