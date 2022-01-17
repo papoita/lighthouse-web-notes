@@ -1,6 +1,6 @@
 <!-- @format -->
 
-January 10, 2022
+January 10, 15, 16 2022
 
 ## postgreSQL
 
@@ -99,3 +99,42 @@ FROM students INNER JOIN cohorts ON cohorts.id = cohort_id;
 
 3. FROM students FULL OUTER JOIN cohorts ON cohorts.id = cohort_id;
    third query will return all rows from both tables, even when there is no match.
+
+# Group by
+
+GROUP BY allows us to combine the results based on a column so an aggregate can be applied to each group.
+
+for all submissions
+
+SELECT count(assignment_submissions.\*) as total_submissions
+FROM assignment_submissions;
+
+but if you want per student
+
+SELECT students.name as student, count(assignment_submissions.\*) as total_submissions
+FROM assignment_submissions
+JOIN students ON students.id = student_id
+GROUP BY students.name;
+
+or group by currently enrolled students
+
+SELECT students.name as student, count(assignment_submissions.\*) as total_submissions
+FROM assignment_submissions
+JOIN students ON students.id = student_id
+WHERE students.end_date IS NULL
+GROUP BY students.name;
+
+# HAving
+
+HAVING allows us to filter our results based on the result of an aggregate function.
+
+Works on aggreagated data
+
+students whose total submission is less than 100
+
+SELECT students.name as student, count(assignment*submissions.*) as total*submissions
+FROM assignment_submissions
+JOIN students ON students.id = student_id
+WHERE students.end_date IS NULL
+GROUP BY students.name
+HAVING count(assignment_submissions.*) < 100;
