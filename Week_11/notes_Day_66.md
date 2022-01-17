@@ -4,6 +4,8 @@ Jan 15, 2022
 
 diagram.drawio
 
+used this tool to do Demo in class about books and exercise breakout of quizzes of compass
+
 rows -records and refer back to the parent table with a parent-key
 app.diagrams.net
 
