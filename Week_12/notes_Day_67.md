@@ -8,3 +8,7 @@ Async execution of queries (using pg library with promises)
 Sanitization of user input (how and why)
 
 https://en.wikipedia.org/wiki/Database_design
+
+# Database normalization
+
+reduce duplicates
