@@ -1,135 +1,157 @@
 <!-- @format -->
 
-January 18, 19,
-We will start by designing the database and creating an ERD for the tables.
-Then we will create the database and the tables using the ERD.
-We will add some fake data to the database to make testing queries easier.
-Then we will start writing queries.
-Finally, we will connect the database to a javascript application so that we can interact with the data from a web page.
+# database cretaion
 
-db reset in package.json in scripts
+CREATE DATABASE lightbnb;
+\c lightbnb
 
-in psql
+# table creation
 
-\conninfo
+Define the tables in order of least dependent to most dependent (i.e least number of foreign keys to greatest number of foreign keys).
 
-# .env
-
-secret or sensitive info
-npmjs. package
-dotenv file
-
-add to gitignore .env file
-require in connection file suing the special syntax
-require('dotenv').config();
-
-pool instead of client to use multiple clients
-
-then connect to server
-
-# LECTURE connecting server to db
-
-https://us02web.zoom.us/rec/share/1s4FgzaazyZCuJNOJmx_IHUuzi0qKQsJ9j3lOJA4Scu9f5_T48yjeuaEAUTU6HBY.HfUt0DhqOW5Tv8mG
-
-Passcode: aWJBd20@
-https://github.com/clopez11/WebFlex-Lectures-October18
-
-https://github.com/clopez11/WebFlex-Lectures-October18/tree/master/M5/W12
-
-# Data definition language
-
-The SQL commands that we use to define the database schema are sometimes referred to as Data Definition Language (DDL) statements
-
-CREATE, ALTER, and DROP
-
-specify the type of data
-CREATE TABLE users (
-id INTEGER PRIMARY KEY
-);
-
-Had to erase a previous db that existed with this name
-
-DROP database test_db;
-
-## datatypes
-
-https://www.postgresql.org/docs/9.3/datatype.html
-
-SMALLINT, INTEGER, BIGINT, DECIMAL, NUMERIC, REAL, DOUBLE, SMALLSERIAL, SERIAL, BIGSERIAL.
-
-https://www.postgresqltutorial.com/postgresql-data-types/
-
-### Boolean
-
-boolean
-
-### Character
-
-CHAR(n), VARCHAR(n), and TEXT
-
-### Numeric
-
-INT, SMALLINT, SERIAL
-float(n), real, numeric
-
-### Temporal
-
-DATE, TIME, TIMESTAMP, INTERVAL
-
-array
-
-### JSON
-
-### UUID
-
-for storing Universally Unique Identifiers better than serial
-
-Special types such as network address and geometric data.
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS properties CASCADE;
+DROP TABLE IF EXISTS reservations CASCADE;
+DROP TABLE IF EXISTS property_reviews CASCADE;
 
 CREATE TABLE users (
 id SERIAL PRIMARY KEY NOT NULL,
-name VARCHAR(255),
-birth_year DATE,
-member_since TIMESTAMP
-);
-
-# alter tables
-
-https://www.postgresqltutorial.com/postgresql-alter-table/
-
-ALTER TABLE users ADD COLUMN name VARCHAR(255), ADD COLUMN birth_year SMALLINT, ADD COLUMN member_since TIMESTAMP;
-
-# Remove table
-
-DROP TABLE IF EXISTS users CASCADE;
-
-# alter to set a default
-
-ALTER TABLE users
-ALTER COLUMN member_since
-SET DEFAULT Now();
-
-# final users table
-
-CREATE TABLE users (
-id SERIAL PRIMARY KEY,
 name VARCHAR(255) NOT NULL,
-birth_year SMALLINT NOT NULL,
-member_since TIMESTAMP NOT NULL DEFAULT Now()
+email VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL
 );
 
-# add users
+CREATE TABLE properties (
+id SERIAL PRIMARY KEY NOT NULL,
+owner_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
 
-INSERT INTO users (name, birth_year)
-VALUES ('Susan Hudson', 2000),
-('Malloy Jenkins', 1000);
+title VARCHAR(255) NOT NULL,
+description TEXT,
+thumbnail_photo_url VARCHAR(255) NOT NULL,
+cover_photo_url VARCHAR(255) NOT NULL,
+cost_per_night INTEGER NOT NULL DEFAULT 0,
+parking_spaces INTEGER NOT NULL DEFAULT 0,
+number_of_bathrooms INTEGER NOT NULL DEFAULT 0,
+number_of_bedrooms INTEGER NOT NULL DEFAULT 0,
 
-# create pets table
+country VARCHAR(255) NOT NULL,
+street VARCHAR(255) NOT NULL,
+city VARCHAR(255) NOT NULL,
+province VARCHAR(255) NOT NULL,
+post_code VARCHAR(255) NOT NULL,
 
-that also when the owner is deleted the pet is deleted too
-
-CREATE TABLE pets (
-id SERIAL PRIMARY KEY,
-name VARCHAR(255) NOT NULL,
-owner_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE
+active BOOLEAN NOT NULL DEFAULT TRUE
 );
+
+CREATE TABLE reservations (
+id SERIAL PRIMARY KEY NOT NULL,
+start_date DATE NOT NULL,
+end_date DATE NOT NULL,
+property_id INTEGER REFERENCES properties(id) ON DELETE CASCADE,
+guest_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE property_reviews (
+id SERIAL PRIMARY KEY NOT NULL,
+guest_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+property_id INTEGER REFERENCES properties(id) ON DELETE CASCADE,
+reservation_id INTEGER REFERENCES reservations(id) ON DELETE CASCADE,
+rating SMALLINT NOT NULL DEFAULT 0,
+message TEXT
+);
+
+# run the schema (insert table)
+
+\i migrations/01_schema.sql
+
+# add data in folder seeds
+
+INSERT INTO reservations (start_date, end_date, property_id, guest_id)
+VALUES ('2018-09-11', '2018-09-26', 1, 1),
+('2019-01-04', '2019-02-01', 2, 2),
+('2021-10-01', '2021-10-14', 3, 3);
+
+INSERT INTO users (name,
+email,
+password)
+VALUES ('Eva Stanley', 'evastanley@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),('Jackson Rose', 'jacksonrose@hotmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),('Sue Luna', sueluna@gmx.com '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+
+INSERT INTO properties (owner_id,
+title, description,
+thumbnail_photo_url,
+cover_photo_url,
+cost_per_night,
+parking_spaces,
+number_of_bathrooms,
+number_of_bedrooms,
+country,
+street,
+city,
+province,
+post_code,
+active) VALUES (1, 'Speed Lamp', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 930.61, 6, 4, 8, 'Canada', '536 Namsub Highway', 'Sotboske', 'Quebec', 28142, true),(2, 'Blank corner', 'description', 'https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg', 85234, 6, 5, 7, 'Canada', '651 Nami Road', 'Bohbatev', 'Alberta', 83680, true),(3, 'Habit mix', 'description', 'https://images.pexels.com/photos/2080018/pexels-photo-2080018.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2080018/pexels-photo-2080018.jpeg', 46058, 1, 2, 3, 'Canada', '1650 Hejto Center', 'Genwezuj', 'Ontario', 38051, true);
+
+INSERT INTO property_reviews (guest_id,
+property_id,
+reservation_id,
+rating,
+message) VALUES (1, 1, 1, 1, 'messages'), (2, 2, 2, 2, 'messages'), (3, 3, 3, 3, 'messages');
+
+## insert
+
+\i seeds/01_seeds.sql
+
+## ACTION CAUTION
+
+added the i schema and seeds in vagrant!!!
+
+had to update property-reviews manually
+UPDATE property_reviews
+SET guest_id= 1, property_id= 1, reservation_id= 1, rating= 1, message= 'message'
+WHERE id = 1;
+
+INSERT INTO property_reviews (guest_id,
+property_id,
+reservation_id,
+rating,
+message)
+VALUES (1, 1, 1, 1, 'messages'),(2, 2, 2, 2, 'messages'),(3, 3, 3, 3, 'messages');
+
+# manually netered data
+
+INSERT INTO users (name,
+email,
+password)
+VALUES ('Eva Stanley', 'evastanley@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),('Jackson Rose', 'jacksonrose@hotmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),('Sue Luna', 'sueluna@gmx.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+
+INSERT INTO properties (owner_id,
+title, description,
+thumbnail_photo_url,
+cover_photo_url,
+cost_per_night,
+parking_spaces,
+number_of_bathrooms,
+number_of_bedrooms,
+country,
+street,
+city,
+province,
+post_code,
+active)
+VALUES (1, 'Speed Lamp', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 93021, 6, 4, 8, 'Canada', '536 Namsub Highway', 'Sotboske', 'Quebec', 28142, true),(2, 'Blank corner', 'description', 'https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg', 85234, 6, 5, 7, 'Canada', '651 Nami Road', 'Bohbatev', 'Alberta', 83680, true),(3, 'Habit mix', 'description', 'https://images.pexels.com/photos/2080018/pexels-photo-2080018.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2080018/pexels-photo-2080018.jpeg', 46058, 1, 2, 3, 'Canada', '1650 Hejto Center', 'Genwezuj', 'Ontario', 38051, true);
+
+INSERT INTO property_reviews (guest_id,
+property_id,
+reservation_id,
+rating,
+message)
+VALUES (1, 1, 1, 1, 'messages'),(2, 2, 2, 2, 'messages'),(3, 3, 3, 3, 'messages');
+
+INSERT INTO reservations (start_date, end_date, property_id, guest_id)
+VALUES ('2018-09-11', '2018-09-26', 1, 1),
+('2019-01-04', '2019-02-01', 2, 2),
+('2021-10-01', '2021-10-14', 3, 3);
+
+# replaced data with more fake data provided
+
+wget http://bit.ly/2YNEENF -O seeds/02_seeds.sql
