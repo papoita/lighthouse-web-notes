@@ -138,3 +138,10 @@ JOIN students ON students.id = student_id
 WHERE students.end_date IS NULL
 GROUP BY students.name
 HAVING count(assignment_submissions.*) < 100;
+
+# Show table schema
+
+psql
+\c database
+
+\d users

@@ -58,3 +58,78 @@ https://www.postgresql.org/docs/9.3/datatype.html
 SMALLINT, INTEGER, BIGINT, DECIMAL, NUMERIC, REAL, DOUBLE, SMALLSERIAL, SERIAL, BIGSERIAL.
 
 https://www.postgresqltutorial.com/postgresql-data-types/
+
+### Boolean
+
+boolean
+
+### Character
+
+CHAR(n), VARCHAR(n), and TEXT
+
+### Numeric
+
+INT, SMALLINT, SERIAL
+float(n), real, numeric
+
+### Temporal
+
+DATE, TIME, TIMESTAMP, INTERVAL
+
+array
+
+### JSON
+
+### UUID
+
+for storing Universally Unique Identifiers better than serial
+
+Special types such as network address and geometric data.
+
+CREATE TABLE users (
+id SERIAL PRIMARY KEY NOT NULL,
+name VARCHAR(255),
+birth_year DATE,
+member_since TIMESTAMP
+);
+
+# alter tables
+
+https://www.postgresqltutorial.com/postgresql-alter-table/
+
+ALTER TABLE users ADD COLUMN name VARCHAR(255), ADD COLUMN birth_year SMALLINT, ADD COLUMN member_since TIMESTAMP;
+
+# Remove table
+
+DROP TABLE IF EXISTS users CASCADE;
+
+# alter to set a default
+
+ALTER TABLE users
+ALTER COLUMN member_since
+SET DEFAULT Now();
+
+# final users table
+
+CREATE TABLE users (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+birth_year SMALLINT NOT NULL,
+member_since TIMESTAMP NOT NULL DEFAULT Now()
+);
+
+# add users
+
+INSERT INTO users (name, birth_year)
+VALUES ('Susan Hudson', 2000),
+('Malloy Jenkins', 1000);
+
+# create pets table
+
+that also when the owner is deleted the pet is deleted too
+
+CREATE TABLE pets (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+owner_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE
+);
