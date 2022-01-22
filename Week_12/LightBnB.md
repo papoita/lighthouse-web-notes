@@ -147,3 +147,13 @@ wget http://bit.ly/2YNEENF -O seeds/02_seeds.sql
 # SELECT challenge
 
 create folder 1_queries to create sql for each search inside
+
+created 5 sql queries
+
+# node postgres
+
+connect to a PostgreSQL database from a JavaScript app using the node-postgres library.
+
+using promises instead of callbacks
+
+# setup node app
