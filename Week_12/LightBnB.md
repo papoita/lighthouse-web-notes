@@ -157,3 +157,81 @@ connect to a PostgreSQL database from a JavaScript app using the node-postgres l
 using promises instead of callbacks
 
 # setup node app
+
+# download zip git hub data for boiler plate
+
+https://github.com/lighthouse-labs/LightBnB_WebApp
+
+move into folder
+
+# install dependencies
+
+npm i
+npm install -g npx
+
+Run the app npm run local and view it at localhost:3000.
+
+# info of data structure
+
+https://flex-web.compass.lighthouselabs.ca/workbooks/flex-m05w12/activities/769?journey_step=42
+
+-public contains all of the HTML, CSS, and client side JavaScript. We're not really interested in that right now.
+-sass contains all of the sass files. Again, not really interesting right now.
+-server contains all of the server side code. This is where we will be writing the database queries.
+
+## server folder
+
+- server.js is the entry point to the application. This connects the routes to the database.
+
+- apiRoutes.js and userRoutes.js are responsible for any HTTP requests to /users/something or /api/something.
+
+-json is a directory that contains a bunch of dummy data in .json files.
+
+-database.js is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from .json files.
+
+We will have to modify the database.js file to have it make queries to our PostgreSQL database instead of JSON files.
+
+### datbase.js
+
+All of these functions are currently getting fake data from the JSON files
+
+only refactor getAllProperties
+
+# connect to postgres
+
+1.installed in \_app directory
+npm install pg
+
+2.add code in database.js
+const { Pool } = require('pg');
+
+const pool = new Pool({
+user: 'vagrant',
+password: '123',
+host: 'localhost',
+database: 'lightbnb'
+});
+
+3. test connection
+
+3.1 add in databse.js
+// the following assumes that you named your connection variable `pool`
+pool.query(`SELECT title FROM properties LIMIT 10;`).then(response => {console.log(response)})
+3.2 run
+psql -h localhost -p 3000 -U vagrant lightbnb
+
+# refactor getAllProperties from databse.js
+
+const getAllProperties = (options, limit = 10) => {
+return pool
+.query(`SELECT * FROM properties LIMIT $1`, [limit])
+.then((result) => {
+console.log(result.rows);
+return result.rows;
+})
+.catch((err) => {
+console.log(err.message);
+});
+};
+
+//.then always returns a promise
