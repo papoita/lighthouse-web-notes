@@ -235,3 +235,27 @@ console.log(err.message);
 };
 
 //.then always returns a promise
+
+# breakout
+
+add db in top of database.js
+const db = require('index.js');
+
+primses return.then is available for the next .then
+
+databases advanced store procedure
+views = a view
+
+processed
+transaction
+
+async await
+
+google maps
+food ordering app
+technology app we pick
+postgres, jquery or ejs (jquery- go for it)
+games
+
+work on branches
+then merge
