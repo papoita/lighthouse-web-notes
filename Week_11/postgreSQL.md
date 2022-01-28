@@ -145,3 +145,29 @@ psql
 \c database
 
 \d users
+
+# TIPS FROM SQL in JS
+
+- sign changes the value from a string to an integer
+
+```
+ if (options.minimum_rating) {
+    values.push(+options.minimum_rating);
+    sql += ` HAVING AVG(property_reviews.rating) >= $${values.length}`;
+  }
+```
+
+i allows for search both capital and low case letters removes case sensitivity
+
+```
+console.log(options);
+  if (options.city) {
+    values.push(`%${options.city}%`);
+    sql += ` AND city iLIKE $${values.length}`;
+  }
+```
+
+# To get the latest entry
+
+evernote for notes
+FROM properties ORDER BY id DESC LIMIT 1

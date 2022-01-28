@@ -259,3 +259,8 @@ games
 
 work on branches
 then merge
+
+# To get the latest entry
+
+evernote for notes
+FROM properties ORDER BY id DESC LIMIT 1
