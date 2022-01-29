@@ -4,6 +4,13 @@ January 10, 15, 16 2022
 
 ## postgreSQL
 
+https://www.khanacademy.org/computing/computer-programming/sql/more-advanced-sql-queries/pt/querying-in-subqueries
+
+https://www.sqltutorial.org/sql-cheat-sheet/
+https://sqlzoo.net/wiki/SELECT_.._SELECT
+
+https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial#Richer_than_UK
+
 https://flex-web.compass.lighthouselabs.ca/workbooks/flex-m05w11/activities/716?journey_step=41&workbook=15
 
 in vagrant psql
@@ -171,3 +178,102 @@ console.log(options);
 
 evernote for notes
 FROM properties ORDER BY id DESC LIMIT 1
+
+# Sub queries
+
+## column in SELECT
+
+SELECT inside of a SELECT
+
+```
+SELECT (
+  SELECT count(assignments)
+  FROM assignments
+)-count(assignment_submissions) as total_incomplete
+FROM assignment_submissions
+JOIN students ON students.id = student_id
+WHERE students.name = 'Ibrahim Schimmel';
+```
+
+f a query returns a single value, we can use it in our SELECT statement just like any other value.
+
+SELECT (
+SELECT count(\*)
+FROM table_name
+) as total, other_column
+FROM other_table_name
+ORDER BY total;
+
+## FROM Sub select table
+
+The result of a select is effectively a table that can be used as you would use a table
+So a select statement may be used as a data source of another select statement.
+
+SELECT avg(total_students) as average_students
+FROM (
+SELECT count(students) as total_students, cohorts.name as cohort_name
+FROM students
+JOIN cohorts on cohorts.id = cohort_id
+GROUP BY cohorts.name
+) as totals_table;
+
+# examples quiz sqlzoo.net
+
+SELECT name, ROUND(gdp_per_capita)
+FROM
+(SELECT name,
+gdp/population AS gdp_per_capita
+FROM bbc) X
+WHERE gdp_per_capita>20000
+
+2.Find the countries in the same region as Bhutan
+
+SELECT name
+FROM bbc
+WHERE region IN
+(SELECT region FROM bbc
+WHERE name='Bhutan')
+
+3. Show the countries where the population is greater than 5 times the average for its region
+
+SELECT name
+FROM bbc b1
+WHERE population>
+5\*(SELECT AVG(population) FROM bbc
+WHERE region=b1.region)
+
+https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial#Richer_than_UK
+
+1. List each country name where the population is larger than that of 'Russia'.
+
+WHERE population >
+(SELECT population FROM world
+WHERE name='Russia')
+
+2.Show the countries in Europe with a per capita GDP greater than 'United Kingdom'.
+
+SELECT name FROM world WHERE gdp/population >
+(SELECT gdp/population FROM world WHERE name = 'United Kingdom');
+
+3.Percentages of Germany
+Germany (population 80 million) has the largest population of the countries in Europe. Austria (population 8.5 million) has 11% of the population of Germany.
+
+Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.
+
+SELECT name, ROUND(100\*population/(SELECT population FROM world WHERE name= 'Germany'))FROM world WHERE continent = 'Europe';
+
+4. Find the largest country (by area) in each continent, show the continent, the name and the area:
+
+SELECT continent, name, population FROM world x
+WHERE population >= ALL
+(SELECT population FROM world y
+WHERE y.continent=x.continent
+AND population>0)
+
+### ROUND
+
+ROUND(7253.86, 0) -> 7254
+ROUND(7253.86, 1) -> 7253.9
+ROUND(7253.86,-3) -> 7000
+
+###
