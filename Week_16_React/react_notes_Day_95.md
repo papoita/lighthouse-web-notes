@@ -1,4 +1,5 @@
-Feb 17, 2022
+Feb 17, 2022, 
+Feb 20, 2022
 # JSX in React
 
 encapsulated components manage their own state
@@ -218,5 +219,22 @@ function Parent(){
   ```
   function Child(props) {
   return <div onClick={props.onClick}>Click me!</div>;
+}
+```
+# conditional rendering 
+allows only ternary operator
+
+```
+function Hello(props) { 
+
+  return (props.yourName ? <h1>Hello, {props.yourName}.</h1> : <h1>Sorry, you don't seem to have a name.</h1>);
+}
+```
+
+# short circuit evaluation
+evaluated left to right, and if the first expression is false, the second expression is not evaluated at all.
+```
+function Hello(props) { 
+  return (props.yourName && <h1>Hello {props.yourName}</h1>);
 }
 ```
