@@ -238,3 +238,23 @@ function Hello(props) {
   return (props.yourName && <h1>Hello {props.yourName}</h1>);
 }
 ```
+# render arrays in JSX
+```
+const someArray = [
+  <p>a paragraph</p>,
+  <p>another paragraph</p>,
+  <p>yet another paragraph</p>,
+];
+
+return <div>{someArray}</div>;
+```
+
+will return this in html
+
+```
+<div>
+  <p>a paragraph</p>
+  <p>another paragraph</p>
+  <p>yet another paragraph</p>
+</div>
+```
