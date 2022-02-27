@@ -90,3 +90,11 @@ A button does not trigger onClick prop when the disabled prop is true
 * In the src/components/__tests__/Button.test.js file remove the .skip from the five tests described. Run the tests to confirm that they all pass with npm test.
 
 
+# refactor code
+
+use library called Classnames to clean up code (already installed in node modules)
+* in  src/components/Button.js
+
+import classNames from classnames;
+
+
