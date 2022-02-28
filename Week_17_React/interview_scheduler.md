@@ -98,3 +98,24 @@ use library called Classnames to clean up code (already installed in node module
 import classNames from classnames;
 
 
+# DayListItem
+name:String the name of the day
+spots:Number the number of spots remaining
+selected:Boolean true or false declaring that this day is selected
+setDay:Function accepts the name of the day eg. "Monday", "Tuesday"
+We use the spots prop for two purposes. To display the text "{props.spots} spots remaining" and to determine if the day is full. The DayListItem knows what it means to be full but not what it means to be selected. It uses this prop directly to determine which styles to apply.
+
+# DayList 
+
+days:Array a list of day objects (each object includes an id, name, and spots)
+day:String the currently selected day
+setDay:Function accepts the name of the day eg. "Monday", "Tuesday"
+
+# component creation steps
+
+Create a file with our component name
+Create & Export the component function
+Add the base HTML in the return statement of our component
+Create & Import a CSS / SCSS file holding the style of our component
+Write stories for Storybook to render our component in isolation
+Refactor the hardcoded content to use props & state
