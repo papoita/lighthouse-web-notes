@@ -122,3 +122,63 @@ Refactor the hardcoded content to use props & state
 
 # Prop drilling
 get data to lower parts of the React Component tree
+
+# Storybook Syntax
+
+An argument can be passed to a function in Storybook by wrapping it in () after the name of the action, as seen in the code above.
+
+# Controlled components
+
+Controlled components use HTML form elements (e.g. <input>, <textarea>, <select>) but use React state to store their current value and update them.
+
+HTML form elements have an attribute called value and support an event called onchange that fires if the value changes
+
+etting the value attribute on the form element with a variable that is stored in state.
+Using an onChange (camelCase, because it's React!) event that fires the setter function set a new value when the input changes.
+
+# controlled List
+select list that takes user input, but is built without using any type of HTML form input (no <input> tags, no <select> tags). Both the <DayList> and the <InterviewerList> were built this way.
+
+The thing to note here is that because these lists are built without HTML form inputs, the lists do not have built-in value or onChange attributes
+
+```jsx
+<script>
+  function displayInterviewer() {
+    const currentInterviewer = document.querySelector("#interviewer-list").value;
+    document.querySelector("#interviewer-output").innerHTML = `The currently selected interviewer is: <strong>${currentInterviewer}</strong>`;
+  }
+</script>
+
+<p>Select an interviewer from the list.</p>
+
+<select id="interviewer-list" onchange="displayInterviewer()">
+  <option value="Sylvia Palmer">Sylvia Palmer</option>
+  <option value="Tori Malcolm">Tori Malcolm</option>
+  <option value="Mildred Nazir">Mildred Nazir</option>
+  <option value="Cohana Roy">Cohana Roy</option>
+  <option value="Sven Jones">Sven Jones</option>
+</select>
+
+<p id="interviewer-output">The currently selected interviewer is:</p>
+```
+vs in react 
+```jsx
+<select id="interviewer-list" onChange={displayInterviewer}>
+  <option value="Sylvia Palmer">Sylvia Palmer</option>
+  <option value="Tori Malcolm">Tori Malcolm</option>
+  ...
+  ```
+
+  * Using <ul> and <li> to create select lists is a common pattern in React.
+  we used React props to assign a piece of data (a day name or interviewer ID) to each <li>. Then we stored a value in state (day or interviewer). The value stored in state 
+
+  # Appointment component
+Empty, Show, Form, Confirm, Status and Error
+
+# steps to build components
+Create a file with our component name
+Create & Export the component function
+Add the base HTML in the return statement of our component
+Create & Import a CSS / SCSS file holding the style of our component
+Write stories for Storybook to render our component in isolation
+Refactor the hard coded content to use props & state
