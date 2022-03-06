@@ -119,3 +119,6 @@ Add the base HTML in the return statement of our component
 Create & Import a CSS / SCSS file holding the style of our component
 Write stories for Storybook to render our component in isolation
 Refactor the hardcoded content to use props & state
+
+# Prop drilling
+get data to lower parts of the React Component tree
