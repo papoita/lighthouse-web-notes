@@ -182,3 +182,9 @@ Add the base HTML in the return statement of our component
 Create & Import a CSS / SCSS file holding the style of our component
 Write stories for Storybook to render our component in isolation
 Refactor the hard coded content to use props & state
+
+#
+onClick={setStudent}
+is the same as because you dont need parameters
+
+onClick={()=>setStudent()}
