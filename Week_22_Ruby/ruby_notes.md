@@ -14,6 +14,9 @@ asdf
 multiple languages
 https://github.com/asdf-vm/asdf
 
+rbenv
+to insrall seversal versions
+
 # in CLI
 irb
 quit
@@ -48,10 +51,73 @@ false.class
 
 #{stringinterpolation}
 
-puts 
+puts " "
 print
 
+also shows the type
+p 
+
 variable_names
+
+# conditionals
+if()
+elsif()
+else
+end
+## unless
+positive
+unless username == paola
+puts "you are not the right user"
+
+sunny = true
+puts "what a nice day" if sunny == true
+
+# ternary operator
+puts sunny ? 'super sunny out' : 'not so sunny'
+
+# type of class
+my_var.class
+
+
+# convert class
+my_var.to_s
+my_var.to_i
+
+# print all methods
+puts.my_var.methods
+
+# constants
+Upper case constants
+underscore
+double equals (there is no cohersion)
+
+# loops
+i = 0 
+loop do
+  i += 1
+  puts "hello " + i.to_s
+end
+
+break if i > 10
+
+# template literals
+" " is `` of js
+
+# loops
+
+names.each_with_index do |name|
+ puts "Hello #{name}, how are you? #{index}
+
+ # generate numbers
+ (1...10).each do
+  puts "yay!!"
+end
+
+or
+
+1000.times do
+  puts "all done!"
+end
 
 # You might prefer %w instead of quotes
 ```ruby
@@ -136,6 +202,7 @@ a = ["FOO", "BAR", "BAZ"]
 a.map { |s| s.downcase } #=> ["foo", "bar", "baz"]
 a.map(&:downcase) #=> ["foo", "bar", "baz"]
 
+
 # Case construct
 grade = 'B'
 
@@ -211,3 +278,39 @@ end
 an_array = ["Hello", "nurse", "and", "world"]
 
 an_array.each { |word| puts word}
+
+# exercise enumeratiing candidates
+33 dif betwwen puts and pp
+The difference is that puts uses to_s to convert the argument to a String, and p uses inspect . This means p is often more useful for debugging than puts . pp is "pretty print"; it uses pretty_inspect to obtain a String representation of an object.
+
+# hashes
+
+## hash rocket
+
+user = {
+  "first_name" => "paola"
+  "last_name" => "perez"
+}
+
+puts user
+puts user["first_name"]
+
+very slow beacuse both key and values are object
+
+# symbols for keys
+
+user = {
+  :first_name => "ada"
+  :last_name => "hello"
+}
+
+puts user
+p user[:last_name]
+
+# lambdas and blocks
+
+my_lambda = lambda do |name|
+  puts "hello there #{name}"
+end
+
+names.each &my_lambda
