@@ -314,3 +314,27 @@ my_lambda = lambda do |name|
 end
 
 names.each &my_lambda
+
+# classes
+
+class Car
+  def initialize make, model, year
+  @make = make
+  @model = model
+  @year = year
+  end
+end
+
+attr_reader :model
+attr_write :model
+attr_accessor :year
+
+car = Car.new
+
+p car
+puts car.make
+puts car.year
+puts.car
+
+## for several attributes
+attr_accessor :year, :make, :model
