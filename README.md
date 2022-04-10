@@ -124,7 +124,24 @@ shortcut to oppening preview in vs code
 
   \*[js prep]
 
-testing
-git commit --amend --date="Sun Nov 07 14:00 2011 +0100" --no-edit
+[Week 16 - Week 19](/Week_16_React)
+    REACT
+    Day 93 Feb 14
+    Day 94 Feb 16, 17, 20 
+    Week 17 started scheduler
+    Week 18 album-search, custom hooks , heart-breaking mini proj
+    Week 19 March 08
 
-git commit --amend --date="Tue Dec 21 14:10 2021 +0100" --no-edit
+[Week 20 - Week 21](/Week_20)
+    March 18 Automated testing
+    March 19 Jest over Cypress
+    class based components
+
+[Week 22 - Week 26](/Week_22_Ruby)
+    April Ruby
+    April Ruby on rails
+    April 9 pair programing twO-O-Player
+
+    April 9 Jungle project
+
+
