@@ -2,8 +2,9 @@ import React from "react";
 
 function Weather(props) {
   function fahrenheitTemperature() {
-    let temperature = (props.temperature * 9) / 5 + 32;
-    return Math.round(temperature);
+    let Ftemperature = (props.temperature * 9) / 5 + 32;
+    let roundedFahrenheit = Math.round(Ftemperature);
+    return roundedFahrenheit;
   }
   return (
     <div>
