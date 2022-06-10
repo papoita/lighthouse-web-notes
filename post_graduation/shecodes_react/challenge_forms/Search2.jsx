@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function Search2() {
   const [city, setCity] = useState("");
 
-  function handleSubmit() {
+  function handleSubmit(event) {
     event.preventDefault();
     alert(`Searching...`);
   }
