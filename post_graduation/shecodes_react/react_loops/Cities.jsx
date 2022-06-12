@@ -56,3 +56,19 @@ export default function Cities() {
     </div>
   );
 }
+////With props being sent from index.js
+import React from "react";
+
+export default function Cities(props) {
+
+
+  return (
+    <div className="Cities">
+      <ul>
+        {props.cities.map((city, index)=>{
+          return <li key={index}>It is{city.temp} degrees in <strong>{city.name}</strong></li>;
+        })}
+      </ul>
+    </div>
+  );
+}
