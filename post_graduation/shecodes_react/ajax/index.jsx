@@ -13,6 +13,7 @@ function App() {
       <Weather city="New York" />
       <Weather city="Bogota" />
       <Weather city="Ottawa" />
+      
     </div>
   );
 }

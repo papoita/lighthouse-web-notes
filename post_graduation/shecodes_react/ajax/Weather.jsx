@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import ReactAnimatedWeather from 'react-animated-weather';
 
 
 export default function Weather(props) {
@@ -19,11 +20,16 @@ export default function Weather(props) {
        <Loader
           type="ThreeDots"
           color="red"
-          height={110}
+          height={10}
           width={110}
           ariaLabel="three-circles-rotating"
         />
-      
+    <ReactAnimatedWeather
+        icon="CLEAR_DAY"
+        color="blue"
+        size="112"
+        animate="true"
+      />
       <p>
         The weather is {props.city} is {Math.round(temperature)}
       </p>
@@ -37,6 +43,24 @@ export default function Weather(props) {
     return <>
     <Loader type="ThreeDots" color="black" height={50} width={50} />;
     <p>Loading temperature for {props.city}...</p>;
+    <ReactAnimatedWeather
+        icon="CLEAR_DAY"
+        color="blue"
+        size="150"
+        animate={true}
+      />
+      <ReactAnimatedWeather
+        icon="SLEET"
+        color="black"
+        size="112"
+        animate={true}
+      />
+      <ReactAnimatedWeather
+        icon="FOG"
+        color="orange"
+        size="200"
+        animate={false}
+      />
     </>
   }
 }
